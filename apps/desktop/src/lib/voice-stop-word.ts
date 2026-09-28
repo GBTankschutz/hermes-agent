@@ -23,6 +23,9 @@ import { $voiceStopPhraseConfig, type VoiceStopPhraseConfig } from '@/store/voic
 // still the backend default (see `applyVoiceStopPhraseFromConfig`).
 const STOP_PHRASES: readonly string[] = [
   'stop',
+  'stopp',
+  'stopp bitte',
+  'bitte stopp',
   'stop listening',
   'stop it',
   'stop please',

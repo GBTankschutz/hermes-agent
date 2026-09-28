@@ -9,6 +9,12 @@ describe('isVoiceStopCommand', () => {
     }
   })
 
+  it('matches German stop commands', () => {
+    for (const phrase of ['stopp', 'Stopp', 'STOPP.', 'stopp bitte', 'bitte stopp', 'hermes stopp']) {
+      expect(isVoiceStopCommand(phrase, { mode: 'default' })).toBe(true)
+    }
+  })
+
   it('matches multi-word stop phrases', () => {
     for (const phrase of [
       'stop listening',
